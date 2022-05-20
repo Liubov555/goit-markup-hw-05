@@ -5,7 +5,7 @@ body {
         sans-serif;
 }
 
-a {
+:root a {
     text-decoration: none;
 }
 
@@ -100,6 +100,8 @@ img {
     font-size: 14px;
     line-height: 1.14;
     color: #212121;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-nav.current {
@@ -143,6 +145,12 @@ img {
     margin-right: 30px;
 }
 
+.header-contacts-item {
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .contacts:hover,
 .contacts:focus {
     color: #2196f3;
@@ -154,6 +162,10 @@ img {
     color: #757575;
     padding-top: 32px;
     padding-bottom: 32px;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-link:hover,
@@ -216,10 +228,16 @@ img {
     background-color: #2196f3;
     color: #FFFFFF;
     font-family: inherit;
+
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:hover,
-.hero-button:focus {}
+.hero-button:focus {
+    transform: scale(1.1);
+}
 
 /*Modal form*/
 .backdrop {
@@ -229,12 +247,14 @@ img {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
+    z-index: 100;
 }
 
 .backdrop.is-hidden {
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
+
 }
 
 .modal-wrapper {
@@ -242,7 +262,6 @@ img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 100;
 
     background-color: #FFFFFF;
     width: 528px;
@@ -462,6 +481,10 @@ img {
     border-radius: 50%;
     color: #AFB1B8;
 
+    transition-property: background-color, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .link-social-icons:hover,
@@ -511,6 +534,10 @@ img {
     border: 1px solid #AFB1B8;
     border-radius: 4px;
     color: #AFB1B8;
+
+    transition-property: border, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover,
@@ -628,6 +655,10 @@ img {
     border: none;
     border-radius: 4px;
     font-family: inherit;
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn:hover,
@@ -676,6 +707,9 @@ img {
 
 .card-link {
     display: block;
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-link:hover,
@@ -683,4 +717,35 @@ img {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
         0px 4px 4px rgba(0, 0, 0, 0.06),
         1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.card-tumb {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 150, 243, 0.9);
+    transform: translateY(100%);
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-tumb:hover .card-overlay {
+    transform: translateY(0)
+}
+
+.overlay-text {
+    padding: 63px 24px;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: #FFFFFF;
 }
