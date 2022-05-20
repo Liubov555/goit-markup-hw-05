@@ -135,13 +135,6 @@ img {
     text-align: center;
 }
 
-
-.header-contacts .contacts {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-}
-
 .header-contacts-item:not(:last-child) {
     margin-right: 30px;
 }
@@ -163,6 +156,9 @@ img {
     color: #757575;
     padding-top: 32px;
     padding-bottom: 32px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
 
     transition-property: color;
     transition-duration: 250ms;
@@ -488,11 +484,18 @@ img {
     height: 100%;
     border-radius: 50%;
     color: #AFB1B8;
+}
 
+.link-social-icons {
+    transition-property: background-color, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link-footer-icons {
     transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 
 .link-social-icons:hover,
@@ -708,7 +711,7 @@ img {
 
 .card-link {
     display: block;
-    transition-property: box-shadow;
+    transition-property: box-shadow, transform;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -738,8 +741,8 @@ img {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.card-tumb:hover .card-overlay,
-.card-tumb:focus .card-overlay {
+.card-link:hover .card-overlay,
+.card-link:focus .card-overlay {
     transform: translateY(0)
 }
 
